@@ -42,6 +42,10 @@
         width: 300px;
     }
 
+    .menu h1 {
+        margin-bottom: 64px;
+    }
+
     .button {
         background-color: var(--color-button-bg);
         

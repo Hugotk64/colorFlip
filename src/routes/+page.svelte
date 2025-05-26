@@ -41,28 +41,28 @@
         padding: 32px;
         width: 300px;
     }
-
+    /* Title */
     .menu h1 {
         margin-bottom: 64px;
     }
 
     .button {
         background-color: var(--color-button-bg);
-        
+        /* Remove link decoration */
         color: var(--color-button-txt);
         text-decoration: none;
         font-weight: bold;
 
         margin: 16px 0;
         padding: 16px;
-
+        /* Buttons and title set by colum */
         display: flex;
         flex-direction: column;
         border-radius: 8px;
-
+        /* Background hover smooth */
         transition: background-color 2s ease;
     }
-
+    
     .button:hover {
         background-color: var(--color-button-hover);
     }

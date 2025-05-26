@@ -34,4 +34,11 @@
         background-size: cover;
         background-repeat: no-repeat;
     }
+
+    .card {
+        background: transparent;
+        border-radius: 8px;
+        box-shadow: 0 4px 16px #0009;
+        width: 336px;
+    }
 </style>

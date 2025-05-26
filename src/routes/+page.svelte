@@ -1,2 +1,6 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<div class="menu">
+	<h1>THE COLOR PROJECT</h1>
+
+	<a href="/" class="button">HEX TO RGB</a>
+	<a href="/" class="button">RGB TO HEX</a>
+</div>

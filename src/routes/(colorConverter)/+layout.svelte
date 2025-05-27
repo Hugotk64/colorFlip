@@ -42,7 +42,7 @@
         color: #000;
         font-size: 24px;
         text-decoration: none;
-        
+
         padding: 4px 8px;
     }
 
@@ -98,5 +98,7 @@
         font-size: 14px;
 		font-weight: bolder;
         color: #555;
+
+        cursor: default;
 	}
 </style>

@@ -23,6 +23,7 @@
 		<output class="valueOutput" id="output" for="input">{$output}</output>
 	</div>
 </div>
+<slot></slot>
 
 <style>
 	:global(body) {

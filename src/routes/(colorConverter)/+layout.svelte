@@ -1,16 +1,26 @@
+<script lang="ts">
+	import { input,output,previewColor } from "$lib/stores";
+
+	import { page } from "$app/stores";
+	// run all time  if url name includes hex-to-rgb set name else other name
+	$: currentPage = $page.url.pathname.includes('hex-to-rgb') ? 'HEX to RGB' : 'RGB to HEX';
+</script>
+
 <!-- Back button to home /-->
 <a href="/" class="backButton"> ← </a>
 
 <div class="card">
 	<!-- Preview picked color -->
-	<div class="preview"></div>
+	<div class="preview" style="background-color: {$previewColor}"></div>
 	<div class="content">
 		<!-- Indicates the page -->
-		<label for="input">HEX TO RGB</label>
+		<label for="input">{currentPage}</label>
 		<!-- Input element -->
-		<input type="text" id="input" placeholder="#B2CD9C" />
+		<!-- svelte-ignore component_name_lowercase -->
+		<input type="text" id="input" bind:value={$input} placeholder="#B2CD9C" />
 		<!-- Show the output -->
-		<output class="valueOutput" id="output" for="input">rgb(178, 205, 156)</output>
+		<!-- svelte-ignore component_name_lowercase -->
+		<output class="valueOutput" id="output" for="input">{$output}</output>
 	</div>
 </div>
 
@@ -31,6 +41,21 @@
 		background-repeat: no-repeat;
 	}
 
+    .backButton {
+        background-color: #FFF;
+        border-radius: 8px;
+        /* Set button at top left */
+        position: absolute;
+        top: 16px;
+        left: 16px;
+        /* make arrow big and remove link decoration */
+        color: #000;
+        font-size: 24px;
+        text-decoration: none;
+
+        padding: 4px 8px;
+    }
+
 	.card {
 		background: transparent;
 		border-radius: 8px;
@@ -44,7 +69,6 @@
 	}
 
 	.preview {
-        background-color: #B2CD9C;
 		/* Cover full width and set height */
 		width: 100%;
 		height: 250px;
@@ -83,5 +107,7 @@
         font-size: 14px;
 		font-weight: bolder;
         color: #555;
+
+        cursor: default;
 	}
 </style>

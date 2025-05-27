@@ -1,3 +1,20 @@
 <script lang="ts">
-	$: console.log("page");	
+	import { input,output,previewColor } from "$lib/stores";
+	
+	$: {
+		// Remove spaces
+		const hex = $input.trim();
+		// Validate structure
+		// optional #
+		// 3 or 4 HEX #abc ABCD
+		// 6 HEX #112233
+		// 8 HEX #1234abCD
+		// Case insensitivity A-a
+		const hexRegex = /^#?([0-9a-f]{3,4}|[0-9a-f]{6}|[0-9a-f]{8})$/i;
+
+		if (hex) {
+			console.log(hexRegex.test(hex));
+			output.set(hex);
+		}
+	}
 </script>

@@ -7,10 +7,10 @@
 	<div class="content">
 		<!-- Indicates the page -->
 		<label for="input">HEX TO RGB</label>
-        <!-- Input element -->
+		<!-- Input element -->
 		<input type="text" id="input" placeholder="#B2CD9C" />
-        <!-- Show the output -->
-		<output class="valueOuput" id="output" for="input">rgb(178, 205, 156)</output>
+		<!-- Show the output -->
+		<output class="valueOutput" id="output" for="input">rgb(178, 205, 156)</output>
 	</div>
 </div>
 
@@ -42,10 +42,10 @@
 		width: 250px;
 		height: 370px;
 	}
-    
+
 	.preview {
-		background-color: #333;
-        /* Cover full width and set height */
+        background-color: #B2CD9C;
+		/* Cover full width and set height */
 		width: 100%;
 		height: 250px;
 	}
@@ -53,9 +53,35 @@
 	.content {
 		background-color: #fff;
 		padding: 12px;
-		
+
 		display: flex;
-        flex-grow: 1; /* If there is space left it fill it */
+		flex-grow: 1; /* If there is space left it fill it */
 		flex-direction: column;
+	}
+
+	.content label {
+		/* Make label big and bold*/
+		font-size: 24px;
+		font-weight: bolder;
+
+		margin-bottom: 16px;
+	}
+
+	.content input[type='text'] {
+		/* Make font but ligh */
+		font-size: 16px;
+		font-weight: lighter;
+		/* border and focus remove to look like text */
+		border: none;
+		outline: none;
+        /* Remove spacing */
+		margin: 0;
+        padding: 0;
+	}
+
+	.valueOutput {
+        font-size: 14px;
+		font-weight: bolder;
+        color: #555;
 	}
 </style>

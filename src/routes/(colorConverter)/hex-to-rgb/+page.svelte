@@ -12,9 +12,13 @@
 		// Case insensitivity A-a
 		const hexRegex = /^#?([0-9a-f]{3,4}|[0-9a-f]{6}|[0-9a-f]{8})$/i;
 
-		if (hex) {
-			console.log(hexRegex.test(hex));
-			output.set(hex);
+		if (!hex) { // Empty
+			output.set('');
+			previewColor.set('#B2CD9C');
+		} else if (!hexRegex.test(hex)) { // Invalid input structure
+			output.set('Invalid HEX format');
+		} else {
+			
 		}
 	}
 </script>

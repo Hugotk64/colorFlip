@@ -31,6 +31,21 @@
 		background-repeat: no-repeat;
 	}
 
+    .backButton {
+        background-color: #FFF;
+        border-radius: 8px;
+        /* Set button at top left */
+        position: absolute;
+        top: 16px;
+        left: 16px;
+        /* make arrow big and remove link decoration */
+        color: #000;
+        font-size: 24px;
+        text-decoration: none;
+        
+        padding: 4px 8px;
+    }
+
 	.card {
 		background: transparent;
 		border-radius: 8px;

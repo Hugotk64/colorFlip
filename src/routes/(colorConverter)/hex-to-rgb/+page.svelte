@@ -25,6 +25,15 @@
 				// convert into array of char, duplicate each and join them
 				hexFull = hexFull.split('').map(c => c+c).join(''); // #abc => #aabbcc
 			}
+
+			// Convert Hex from base 16 to base 10.
+			const r = parseInt(hexFull.slice(0, 2), 16); //Red
+			const g = parseInt(hexFull.slice(2, 4), 16); //green
+			const b = parseInt(hexFull.slice(4, 6), 16); //Blue
+			// if hex has transparency convert to base 10 and divide by 255. AA == 170 / 255 == 0.65
+			const a = hexFull.length === 8 ? parseInt(hexFull.slice(6, 8), 16) / 255 : null; // Else null
+
+			
 		}
 	}
 </script>

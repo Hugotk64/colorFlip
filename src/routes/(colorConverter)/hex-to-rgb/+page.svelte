@@ -33,7 +33,12 @@
 			// if hex has transparency convert to base 10 and divide by 255. AA == 170 / 255 == 0.65
 			const a = hexFull.length === 8 ? parseInt(hexFull.slice(6, 8), 16) / 255 : null; // Else null
 
-			
+			const result = a !== null // If alpha 
+			? `rgba(${r}, ${g}, ${b}, ${a.toFixed(2)})` // return rgba and fix a to 2 decimals
+			: `rgb(${r}, ${g}, ${b})`; // return rgb
+
+			output.set(result);
+			previewColor.set(result);
 		}
 	}
 </script>

@@ -18,7 +18,13 @@
 		} else if (!hexRegex.test(hex)) { // Invalid input structure
 			output.set('Invalid HEX format');
 		} else {
-			
+			//Remove # from input
+			let hexFull = hex.replace(/^#/, '');
+			// If input trimed and without # is 3 or 4 digits
+			if ( hexFull.length === 3 || hexFull.length === 4 ) {
+				// convert into array of char, duplicate each and join them
+				hexFull = hexFull.split('').map(c => c+c).join(''); // #abc => #aabbcc
+			}
 		}
 	}
 </script>

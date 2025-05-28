@@ -2,8 +2,16 @@
 	import { input,output,previewColor } from "$lib/stores";
 
 	import { page } from "$app/stores";
-	// run all time  if url name includes hex-to-rgb set name else other name
-	$: currentPage = $page.url.pathname.includes('hex-to-rgb') ? 'HEX to RGB' : 'RGB to HEX';
+
+	let currentPage: string;
+	let placeHolder: string;
+	// run all time
+	$: {
+		//  if url name includes hex-to-rgb set name else other name
+		currentPage = $page.url.pathname.includes('hex-to-rgb') ? 'HEX to RGB' : 'RGB to HEX';
+		// Display placeholder base in page in hex or rgb
+		placeHolder = currentPage === 'HEX to RGB' ? '#B2CD9C' : 'rgb(178, 205, 156)';
+	}
 </script>
 
 <!-- Back button to home /-->
@@ -17,7 +25,7 @@
 		<label for="input">{currentPage}</label>
 		<!-- Input element -->
 		<!-- svelte-ignore component_name_lowercase -->
-		<input type="text" id="input" bind:value={$input} placeholder="#B2CD9C" />
+		<input type="text" id="input" bind:value={$input} placeholder={placeHolder} />
 		<!-- Show the output -->
 		<!-- svelte-ignore component_name_lowercase -->
 		<output class="valueOutput" id="output" for="input">{$output}</output>

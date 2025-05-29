@@ -27,7 +27,7 @@
         align-items: center;
         /* Cover full screen */
         height: 100vh;
-        width: 100wh;
+        width: 100vw;
 
         margin: 0;
     }

@@ -1,10 +1,11 @@
-<div class="menu">
-	<h1>THE COLOR PROJECT</h1>
+<div class="container">
+    <div class="menu">
+	    <h1>THE COLOR PROJECT</h1>
 
-	<a href="/hex-to-rgb" class="button">HEX TO RGB</a>
-	<a href="/rgb-to-hex" class="button">RGB TO HEX</a>
+	    <a href="/hex-to-rgb" class="button">HEX TO RGB</a>
+	    <a href="/rgb-to-hex" class="button">RGB TO HEX</a>
+    </div>
 </div>
-
 <style>
     :root {
         --color-body-bg: #F2F2F2;
@@ -18,8 +19,7 @@
         --color-button-hover: #334624;
     }
 
-    :global(body){
-        font-family: Helvetica,sans-serif;
+    .container{
         background-color: var(--color-body-bg);
         /* Center content */
         display: flex;
@@ -28,8 +28,6 @@
         /* Cover full screen */
         height: 100vh;
         width: 100vw;
-
-        margin: 0;
     }
 
     .menu {

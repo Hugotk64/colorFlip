@@ -13,30 +13,30 @@
 		placeHolder = currentPage === 'HEX to RGB' ? '#B2CD9C' : 'rgb(178, 205, 156)';
 	}
 </script>
+<div class="container">
+	<!-- Back button to home /-->
+	<a href="/" class="backButton"> ← </a>
 
-<!-- Back button to home /-->
-<a href="/" class="backButton"> ← </a>
-
-<div class="card">
-	<!-- Preview picked color -->
-	<div class="preview" style="background-color: {$previewColor}"></div>
-	<div class="content">
-		<!-- Indicates the page -->
-		<label for="input">{currentPage}</label>
-		<!-- Input element -->
-		<!-- svelte-ignore component_name_lowercase -->
-		<input type="text" id="input" bind:value={$input} placeholder={placeHolder} />
-		<!-- Show the output -->
-		<!-- svelte-ignore component_name_lowercase -->
-		<output class="valueOutput" id="output" for="input">{$output}</output>
+	<div class="card">
+		<!-- Preview picked color -->
+		<div class="preview" style="background-color: {$previewColor}"></div>
+		<div class="content">
+			<!-- Indicates the page -->
+			<label for="input">{currentPage}</label>
+			<!-- Input element -->
+			<!-- svelte-ignore component_name_lowercase -->
+			<input type="text" id="input" bind:value={$input} placeholder={placeHolder} />
+			<!-- Show the output -->
+			<!-- svelte-ignore component_name_lowercase -->
+			<output class="valueOutput" id="output" for="input">{$output}</output>
+		</div>
 	</div>
 </div>
+
 <slot></slot>
 
 <style>
-	:global(body) {
-		font-family: Helvetica, sans-serif;
-		margin: 0;
+	.container {
 		/* Center content */
 		display: flex;
 		align-items: center;

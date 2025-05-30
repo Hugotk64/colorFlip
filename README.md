@@ -81,6 +81,6 @@ Open your browser at `http://localhost:5173/`
 - A sample placeholder helps guide your input.
 
 ## 👨‍💻 Author
-**Hugo Antonio Castillo Vargas**  
+Hugo Antonio Castillo Vargas  
 Student of Computer Engineering  
 UNED - Universidad Estatal a Distancia

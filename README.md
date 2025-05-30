@@ -17,6 +17,25 @@ A real-time color converter built with SvelteKit that allows users to seamlessly
 
 ## 📁 Project Structure
 
+```plaintext
+colorFlip/
+│
+├── src/
+│   ├── lib/
+│   │   └── stores.ts          # Shared input/output/previewColor state
+│   └── routes/
+│       └── (colorConverter)/
+│           ├── +layout.svelte     # Shared layout for both converters
+│           ├── hex-to-rgb/
+│           │   └── +page.svelte   # HEX to RGB logic
+│           └── rgb-to-hex/
+│               └── +page.svelte   # RGB to HEX logic
+│
+├── static/                   # Public assets if needed
+├── README.md
+└── ...  
+```
+
 ---
 
 ## 💡 How It Works

@@ -33,7 +33,7 @@ colorFlip/
 │
 ├── static/                   # Public assets if needed
 ├── README.md
-└── ...
+└── ... ´´´
 
 ---
 

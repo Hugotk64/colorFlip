@@ -1,4 +1,5 @@
 # 🎨 colorFlip  
+
 A real-time color converter built with SvelteKit that allows users to seamlessly convert between HEX and RGB(A) color formats with instant visual feedback.
 
 ---
@@ -49,6 +50,7 @@ colorFlip/
 ## 🧪 Supported Input Examples
 
 ### HEX → RGB(A)
+
 | Input         | Output                |
 |---------------|------------------------|
 | `#fff`        | `rgb(255, 255, 255)`   |
@@ -66,6 +68,7 @@ colorFlip/
 ## 🛠️ Run Locally
 
 ### Prerequisites
+
 - [Node.js](https://nodejs.org/)
 - [pnpm](https://pnpm.io/) or `npm`
 
@@ -75,13 +78,16 @@ colorFlip/
 pnpm install
 pnpm dev
 Open your browser at `http://localhost:5173/`
+```
 
 ## ✅ Usage Tips
+
 - Input field accepts flexible formats like `#abc`, `#123456`, `rgba(0, 0, 0, 0.5)` and more.
 - Invalid formats will return a helpful error message.
 - A sample placeholder helps guide your input.
 
 ## 👨‍💻 Author
+
 Hugo Antonio Castillo Vargas  
 Student of Computer Engineering  
 UNED - Universidad Estatal a Distancia

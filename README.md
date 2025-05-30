@@ -17,7 +17,6 @@ A real-time color converter built with SvelteKit that allows users to seamlessly
 
 ## 📁 Project Structure
 
-```plaintext
 colorFlip/
 │
 ├── src/
@@ -34,7 +33,7 @@ colorFlip/
 ├── static/                   # Public assets if needed
 ├── README.md
 └── ...  
-```
+
 
 ---
 
